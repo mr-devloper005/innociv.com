@@ -38,7 +38,7 @@ export default async function HomePage() {
 
   return (
     <EditableSiteShell>
-      <main>
+      <main className="overflow-x-clip">
       <SchemaJsonLd
         data={{
           '@context': 'https://schema.org',

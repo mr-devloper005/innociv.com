@@ -15,11 +15,12 @@ body {
   background-color: var(--slot4-page-bg) !important;
   color: var(--slot4-page-text) !important;
   background-image: var(--slot4-body-gradient) !important;
+  background-attachment: fixed;
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--slot4-accent-fill) 22%, transparent);
-  color: var(--slot4-page-text);
+  background: color-mix(in oklab, var(--slot4-accent-fill) 28%, transparent);
+  color: var(--slot4-dark-text);
 }
 
 ::-webkit-scrollbar-track {
@@ -27,18 +28,29 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: color-mix(in oklab, var(--slot4-accent) 40%, transparent);
+  background: color-mix(in oklab, var(--slot4-accent-fill) 46%, transparent);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in oklab, var(--slot4-accent) 62%, transparent);
+  background: color-mix(in oklab, var(--slot4-accent-fill) 66%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--slot4-page-bg);
 }
 
 .article-content h2 {
-  color: var(--slot4-accent);
+  color: var(--slot4-accent-fill);
 }
 
 .article-content a {
   color: var(--slot4-accent-fill);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.article-content p + p {
+  margin-top: 1.15rem;
 }
